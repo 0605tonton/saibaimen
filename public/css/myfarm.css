@@ -17,3 +17,14 @@
         margin-left: 0 !important;
     }
 }
+
+
+/* yamaguchi */
+.navbar{
+	margin-bottom : 20px;
+}
+
+.navbar-default {
+	background-color : #f8f8f8;
+	border-color : #e7e7e7;
+}

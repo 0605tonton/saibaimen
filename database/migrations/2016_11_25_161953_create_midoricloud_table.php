@@ -15,7 +15,7 @@ class CreateMidoricloudTable extends Migration
     {
         Schema::create('midori_clouds', function (Blueprint $table) {
             $table->increments('id')->index;
-            $table->integer('products_id');
+            $table->integer('products_id')->unsigned()->nullable();
             $table->integer('co');
             $table->float('sw_ver');
             $table->float('watertemp');
@@ -27,6 +27,7 @@ class CreateMidoricloudTable extends Migration
             $table->string('hw_ver');
             $table->string('file');
             $table->string('saved_to');
+            $table->dateTimeTz('updated_at');
             $table->timestamp('created_at');
     	});
     }

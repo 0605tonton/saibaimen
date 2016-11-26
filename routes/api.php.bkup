@@ -22,6 +22,8 @@ Route::get('/user', function (Request $request) {
  * みどりクラウドからのデータ受信処理
  */
 Route::post('/midori.php', function (Request $request) {
+    Log::info('Showing user profile for user: '.$request);
+
     $filedir = "/home/saibaimen/laravel/storage/app/midori_dat/";
     $picfiledir = "/home/saibaimen/laravel/storage/app/midori_pic/";
 
@@ -32,28 +34,17 @@ Route::post('/midori.php', function (Request $request) {
 
     // みどりクラウドから受信したデータをデータベースに保存する
     $midoriCloud = new MidoriCloud;
-    logger("co:".$request->input("co"));
-    logger("sw_ver:".$request->input("sw_ver"));
-    logger("watertemp:".$request->input("watertemp"));
-    logger("device_id:".$request->input("device_id"));
-    logger("temperature:".$request->input("temperature"));
-    logger("soil_moisture:".$request->input("soil_moisture"));
-    logger("humidity:".$request->input("humidity"));
-    logger("illuminance:".$request->input("illuminance"));
-    logger("hw_ver:".$request->input("hw_ver"));
-    logger("file:".$request->file('photo'));
-    logger("saved_to:".$pictfilename . $request->file('photo'));
-    $midoriCloud->co = $request->input("co");
-    $midoriCloud->sw_ver = $request->input("sw_ver");
-    $midoriCloud->watertemp = $request->input("watertemp");
-    $midoriCloud->device_id = $request->input("device_id");
-    $midoriCloud->temperature = $request->input("temperature");
-    $midoriCloud->soil_moisture = $request->input("soil_moisture");
-    $midoriCloud->humidity = $request->input("humidity");
-    $midoriCloud->illuminance = $request->input("illuminance");
-    $midoriCloud->hw_ver = $request->input("hw_ver");
-    $midoriCloud->file = $request->file("photo");
-    $midoriCloud->saved_to = $pictfilename . $request->file('photo');
+    $midoriCloud->co = $_POST["co"];
+    $midoriCloud->sw_ver = $_POST["sw_ver"];
+    $midoriCloud->watertemp = $_POST["watertemp"];
+    $midoriCloud->device_id = $_POST["device_id"];
+    $midoriCloud->temperature = $_POST["temperature"];
+    $midoriCloud->soil_moisture = $_POST["soil_moisture"];
+    $midoriCloud->humidity = $_POST["humidity"];
+    $midoriCloud->illuminance = $_POST["illuminance"];
+    $midoriCloud->hw_ver = $_POST["hw_ver"];
+    $midoriCloud->file = $_POST["file"];
+    $midoriCloud->saved_to = $_POST["saved_to"];
     $midoriCloud->save();
 
     // POST

@@ -33,3 +33,9 @@ Route::get('owner/mytop', 'Owner\OwnerController@getMytop');
 
 // 日記
 Route::get('owner/dialy', 'Owner\OwnerController@getDialy');
+
+// ログインテスト
+Route::get('login/google', 'Auth\LoginTest@loginWithGoogle');
+Route::get('login/facebook', 'Auth\LoginTest@loginWithFacebook');
+Route::post('login/google', 'Auth\LoginTest@loginWithGoogle');
+Route::post('login/facebook', 'Auth\LoginTest@loginWithFacebook');

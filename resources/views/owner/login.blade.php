@@ -47,4 +47,18 @@
             </div>
         </div>
     </div>
+@endsectionol-md-9">
+                                <a href="{{ url('/login/facebook') }}">Facebookでログイン</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <a href="{{ url('/login/google') }}">Googleでログイン</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
