@@ -8,7 +8,8 @@
         <br/>
         <br/>
         <br/>
-        <div class="text-center"><h3>広告画像</h3></div>
+      <a href="{{ url('') }}"><img class="img-responsive" src=“…/img/a.jpg"/></a>
+        <div class="text-center"><h3>広告</h3></div>
         <br/>
         <br/>
         <br/>
