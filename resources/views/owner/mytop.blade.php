@@ -1,54 +1,44 @@
 {{-- resources/views/owner/mytop.blade.php --}}
 @extends('owner')
 @section('content')
-    　My Farm
-    <table class="table table-responsive">
-        <tr>
-            <td>
-                サンエスファーム
-                <div class="bg-warning">
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+    <div class="h3">サンエスファーム</div>
+    <div class="content-block">
+        <div class="left-block">
+            <div class="title-box">
+                <div class="text-center">きょう の ようす</div>
+            </div>
+            <div class="animation-box">
+                <div class="hs-wrapper">
+	            <?php $i=0 ?>
+                    @foreach($urls as $url)
+                        <img src={{ $url }} width="100%" alt={{ $url }} />
+		        @if ($i > 8)
+		            @break
+		        @endif
+		        <?php $i++ ?>
+                    @endforeach 
+                <div class="control-box">
+                    <a class="left-button" href="#">前の日</a>
+                    <a class="right-button" href="#">次の日</a>
                 </div>
-                気温：20度、湿度：60%
-            </td>
-            <td>
-                観察日記<br/>
-                ＜前の日　　　　　　　　次の日＞
-                <hr />
-                <div class="text-center">11月1日(月)</div>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
+            </div>
+        </div>
+    	<div class="right-block">
+       	    <div class="title-box">
+                <div class="text-center">観察日記</div>
+            </div>
+        </div>
+        <div class="bottom-block">
+            <div class="farmer-report">
                 生産者レポート
                 <br/>
                 　2016.11.01　サンエスファーム　今村さん<br />
-                　　今日は気温が高いので、冷房を入れています。
-            </td>
-        </tr>
-        <tr>
-            <td width="50%">
+                　　今日は気温が高いので、冷房を入れています。<br />
+                <br />
                 <button class="btn-block btn-info">収穫体験に行く</button>
-            </td>
-            <td>
                 <button class="btn-block btn-primary">送付を依頼する</button>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
+
 @endsection

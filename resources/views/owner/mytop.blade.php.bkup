@@ -1,0 +1,62 @@
+{{-- resources/views/owner/mytop.blade.php --}}
+@extends('owner')
+@section('content')
+    <script type="text/javascript">
+        $(function(){
+            $(window).on('load',function(){
+                alert('Hello');
+        });
+            (function(win, doc) {
+                var img = doc.getElementById("img"),
+                srcList = [ '/storage/midori_pic/pic_20161126072630camera.jpg', '/storage/midori_pic/pic_20161126073028camera.jpg' ],
+                length = srcList.length,
+                index = 0;
+    
+                setInterval(function() {
+                    img.setAttribute("src", srcList[index]);
+                    index = ++index % length;
+                }, 200);
+            })(this, document);
+        }
+    </script>
+    　My Farm
+    <table class="table table-responsive">
+        <tr>
+            <td>
+                サンエスファーム
+                <div class="bg-warning">
+                    <img id="img" src="" />
+                </div>
+                気温：20度、湿度：60%
+            </td>
+            <td>
+                観察日記<br/>
+                ＜前の日　　　　　　　　次の日＞
+                <hr />
+                <div class="text-center">11月1日(月)</div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                生産者レポート
+                <br/>
+                　2016.11.01　サンエスファーム　今村さん<br />
+                　　今日は気温が高いので、冷房を入れています。
+            </td>
+        </tr>
+        <tr>
+            <td width="50%">
+                <button class="btn-block btn-info">収穫体験に行く</button>
+            </td>
+            <td>
+                <button class="btn-block btn-primary">送付を依頼する</button>
+            </td>
+        </tr>
+    </table>
+@endsection

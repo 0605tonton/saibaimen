@@ -1,0 +1,204 @@
+div.content-block {
+   position: relative;
+   width: 100%;
+   height: 600px;
+}
+
+div.left-block {
+   position: relative;
+   float: left;
+   width: 50%;
+   height: 320px;
+   padding: 10px;
+}
+
+div.right-block {
+   position: relative;
+   float: right;
+   width: 50%;
+   height: 320px;
+   padding: 10px;
+}
+
+div.bottom-block {
+   width: 100%;
+   position: relative;
+   clear: both;
+}
+
+div.title-box {
+   background: #f0fff0;
+   border: 3px #a0ffa0 solid;  /* 枠線を引く */
+   border-radius: 20px;   
+   margin-bottom: 5px;
+}
+
+div.animation-box {
+   position: relative;
+   width: 100%;
+}
+
+div.control-box {
+   position: relative;
+   top: 280px;
+}
+
+.h3 {
+   padding: .25em 0 .25em .75em;
+   border-left: 6px solid #ccc;
+   border-bottom: 1px solid #ccc;
+}
+
+.h3:first-letter {
+	margin-right: .1em;
+	font-size: 1.5em;
+}
+
+.farmer-report {
+    width: 100%;
+        padding: 1em;
+	border: 3px solid #ccc;
+	border-radius: 3em .7em 2em .7em/.7em 2em .7em 3em;
+}
+
+.right-button {
+	position: relative;
+        float: right;
+	display: inline-block;
+	padding: .9em 4em;
+	background-color: #333;
+	border: 2px solid #333;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	transition: all .3s;
+}
+
+.right-button::after {
+	position: absolute;
+	top: 50%;
+	right: .2em;
+	content: '';
+	margin-top: -5px;
+	border: 7px solid transparent;
+	border-top-width: 5px;
+	border-bottom-width: 5px;
+	border-left-color: #fff;
+	transition: all .3s;
+}
+
+.right-button:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+.post-contents .button01:hover::after {
+	border-left-color: #333;
+}
+
+.left-button {
+        position: relative;
+        float: left;
+        display: inline-block;
+        padding: .9em 4em;
+        background-color: #333;
+        border: 2px solid #333;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        transition: all .3s;
+}
+
+.left-button::after {
+        position: absolute;
+        top: 50%;
+        left: .2em;
+        content: '';
+        margin-top: -5px;
+        border: 7px solid transparent;
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+        border-right-color: #fff;
+        transition: all .3s;
+}
+
+.left-button:hover {
+        background-color: #fff;
+        color: #333;
+}
+
+.post-contents .button02:hover::after {
+        border-right-color: #333;
+}
+
+/**
+ * ユーザログイン後のトップ画面でマウスオーバー時に画像をアニメーションさせる
+ */
+
+.hs-wrapper {
+    position: relative;
+}
+
+.hs-wrapper img{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    animation: showMe 1.0s linear infinite 0s forwards;
+    animation-play-state: running;
+}
+.hs-wrapper:hover img{
+    animation-play-state: running;
+}
+
+@keyframes showMe {
+    0% { visibility: visible; z-index: 100; }
+    12.5% { visibility: visible; z-index: 100; }
+    25% { visibility: hidden; z-index: 0; }
+    100% { visibility: hidden; z-index: 0; }
+}
+
+.hs-wrapper img:nth-child(1){
+    z-index: 9;
+}
+.hs-wrapper img:nth-child(2){
+    animation-delay: 0.1s;
+    z-index: 8;
+}
+.hs-wrapper img:nth-child(3){
+    animation-delay: 0.2s;
+    z-index: 7;
+}
+.hs-wrapper img:nth-child(4){
+    animation-delay: 0.3s;
+    z-index: 6;
+}
+.hs-wrapper img:nth-child(5){
+    animation-delay: 0.4s;
+    z-index: 5;
+}
+.hs-wrapper img:nth-child(6){
+    animation-delay: 0.5s;
+    z-index: 4;
+}
+.hs-wrapper img:nth-child(7){
+    animation-delay: 0.6s;
+    z-index: 3;
+}
+.hs-wrapper img:nth-child(8){
+    animation-delay: 0.7s;
+    z-index: 2;
+}
+.hs-wrapper img:nth-child(9){
+    animation-delay: 0.8s;
+    z-index: 1;
+}
+.hs-wrapper img:nth-child(10){
+    animation-delay: 0.9s;
+    z-index: 0;
+}
+
+.hs-wrapper:hover .hs-overlay{
+    opacity: 1;
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.3) inset;
+}
+

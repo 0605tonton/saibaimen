@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers\Owner;
 use App\Http\Controllers\Controller;
+use Storage;
 
 class OwnerController extends Controller {
 
@@ -16,7 +17,14 @@ class OwnerController extends Controller {
 
     public function postLogin()
     {
-        return view('owner/mytop', ['loginFlag' => true]);
+	$files = Storage::files('midori_pic');
+        $urls = array();
+	foreach($files as $file) {
+            $url = Storage::url($file);
+            logger($url);
+	    array_push($urls, $url);
+        }
+        return view('owner/mytop')->with(['loginFlag' => true, 'urls' => $urls]);
     }
 
     public function getLogout()
@@ -31,7 +39,14 @@ class OwnerController extends Controller {
 
     public function postRegister()
     {
-        return view('owner/mytop', ['loginFlag' => true]);
+	$files = Storage::files('midori_pic');
+        $urls = array();
+	foreach($files as $file) {
+            $url = Storage::url($file);
+            logger($url);
+	    array_push($urls, $url);
+        }
+        return view('owner/mytop')->with(['loginFlag' => true, 'urls' => $urls]);
     }
 
     public function getSample()

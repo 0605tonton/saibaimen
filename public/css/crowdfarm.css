@@ -1,0 +1,143 @@
+.navbar-toggle {
+    z-index: 2;
+}
+
+.navbar-brand-center {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 15%;
+    text-align:center;
+    margin: auto;
+    color: #666666;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand-center {
+        margin-left: 0 !important;
+    }
+}
+
+/**
+ * ユーザログイン後のトップ画面でマウスオーバー時に画像をアニメーションさせる
+ */
+.hs-wrapper {
+    position: relative;
+}
+
+.hs-wrapper img{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    animation: showMe 1.0s linear infinite 0s forwards;
+    animation-play-state: paused;
+}
+.hs-wrapper:hover img{
+    animation-play-state: running;
+}
+
+@keyframes showMe {
+    0% { visibility: visible; z-index: 100; }
+    12.5% { visibility: visible; z-index: 100; }
+    25% { visibility: hidden; z-index: 0; }
+    100% { visibility: hidden; z-index: 0; }
+}
+
+.hs-wrapper img:nth-child(1){
+    z-index: 9;
+}
+.hs-wrapper img:nth-child(2){
+    animation-delay: 0.1s;
+    z-index: 8;
+}
+.hs-wrapper img:nth-child(3){
+    animation-delay: 0.2s;
+    z-index: 7;
+}
+.hs-wrapper img:nth-child(4){
+    animation-delay: 0.3s;
+    z-index: 6;
+}
+.hs-wrapper img:nth-child(5){
+    animation-delay: 0.4s;
+    z-index: 5;
+}
+.hs-wrapper img:nth-child(6){
+    animation-delay: 0.5s;
+    z-index: 4;
+}
+.hs-wrapper img:nth-child(7){
+    animation-delay: 0.6s;
+    z-index: 3;
+}
+.hs-wrapper img:nth-child(8){
+    animation-delay: 0.7s;
+    z-index: 2;
+}
+.hs-wrapper img:nth-child(9){
+    animation-delay: 0.8s;
+    z-index: 1;
+}
+.hs-wrapper img:nth-child(10){
+    animation-delay: 0.9s;
+    z-index: 0;
+}
+
+.hs-wrapper:hover .hs-overlay{
+    opacity: 1;
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.3) inset;
+}
+
+/*
+ * トップ画面の写真に影をつける
+ */
+.frame {
+    display: inline-block;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+}
+
+/* yamaguchi */
+.navbar{
+	margin-bottom : 20px;
+}
+
+.navbar-brand {
+	height : 60px;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #FFFFFF;
+	padding-top : 20px;
+}
+
+.navbar-default {
+	background-color : #3CB371;
+	border-color : #e7e7e7;
+}
+
+.panel-footer {
+	background-image : url("../img/background.jpg");
+	color: #FFFFFF;
+	padding-top : 30px;
+	padding-bottom : 70px;
+}
+
+.panel-footer a {
+	color: #FFFFFF;
+}
+
+.bg-success {
+	background-image : url("../img/main.jpg");
+}
+
+.bg-success-title{
+	color : #FFFFFF;
+	font-size : 40px;
+	text-align : center;
+	width : 700px;
+	height : 100px;
+	background-image : url("../img/main_title.png");
+	margin-left : auto;
+	margin-right : auto;
+
+}

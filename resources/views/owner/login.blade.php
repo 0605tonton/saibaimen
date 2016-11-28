@@ -42,18 +42,14 @@
                             </div>
                         </div>
                         {!! Form::close() !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsectionol-md-9">
-                                <a href="{{ url('/login/facebook') }}">Facebookでログイン</a>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-9">
+                                <a href="{{ url('/login/facebook') }}"><img src="/img/fb.png" width="40" height="40">&nbsp;&nbsp;Facebookでログイン</a>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-offset-3 col-md-9">
-                                <a href="{{ url('/login/google') }}">Googleでログイン</a>
+                                <a href="{{ url('/login/google') }}"><img src="/img/google.png"  width="53" height="40">&nbsp;&nbsp;Googleでログイン</a>
                             </div>
                         </div>
                     </div>
